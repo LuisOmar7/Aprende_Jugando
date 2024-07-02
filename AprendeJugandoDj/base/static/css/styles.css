@@ -1,0 +1,29 @@
+/* custom.css */
+.colornav {
+    background-color: rgb(16, 200, 241);
+}
+
+.nav-link {
+    margin-right: 140px !important;
+    margin-left: 140px;
+}
+
+.bloque-de-color {
+    width: 100%; /* Ancho del bloque */
+    height: 200px; /* Alto del bloque */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f587e; /* Color de fondo del bloque */
+  }
+  
+.contLandind{
+    color: rgb(255, 255, 255);
+    margin: 0%;
+}
+
+.imgCourses {
+    width: 30%;
+    height: 30%;
+}
