@@ -27,3 +27,90 @@
     width: 30%;
     height: 30%;
 }
+
+
+/*PRODUCTOS*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #009fe3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.contenedorCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 70px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #bfbfbf;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.img2 {
+    width: 500px;
+    height: 300px;
+}
+
+.p {
+    color: #666;
+    font-size: 15px;
+}
+
+.button {
+    background-color: #009fe3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+/* ESTILOS NOSOTROS */
+.contenedor {
+    width: 100%;
+    padding: 10px;
+}
+
+.seccion {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+    background-color: #69b1ff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin: 25px;
+}
+
+.img3 {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 25px;
+}

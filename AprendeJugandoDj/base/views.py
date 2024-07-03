@@ -6,3 +6,6 @@ def inicio(request):
 
 def categorias(request):
     return render(request, 'base/categorias.html')
+
+def productos(request):
+    return render(request, 'base/productos.html')
