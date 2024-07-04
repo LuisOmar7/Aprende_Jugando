@@ -1,4 +1,5 @@
 {% extends "base/base.html" %}
+{%load static%}
 
 {%block titulo%} Inicio {%endblock%}
 
@@ -6,7 +7,7 @@
 
 <div class='bloque-de-color'>
     <div class='contLandind'>
-        <h3>titulo</h3>
+        <h3>Inicio</h3>
     </div>  
 </div>
 
@@ -18,7 +19,8 @@
     <!--Encabezado -->
     <div class='row align-items-start'>
         <div class='col text-start'>
-            <p class='color-text'>rsrdtfgyuhiojk</p>
+            <p class='color-text'>Mas buscado</p>
+            <img src="{% static 'images/home.png'%}" alt='Imagen'>
         </div>
     </div>
     <!-- /Encabezado-->
