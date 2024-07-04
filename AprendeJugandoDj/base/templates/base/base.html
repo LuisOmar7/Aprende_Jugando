@@ -20,6 +20,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-list">
@@ -29,26 +30,31 @@
           <a class="nav-link text-white" href="{%url 'Productos'%}">Categorias</a>
         </li>
         <li class="nav-list">
-          <a class="nav-link text-white" href="">Nosotros</a>
+          <a class="nav-link text-white" href="{%url 'Nosotros'%}">Nosotros</a>
         </li>
         <li class="nav-list">
           <a class="nav-link text-white" href="">Mi cuenta</a>
         </li>
       </ul>
-      
     </div>
+
   </nav>
   <!-- /Fin menú -->
+
+  
   <div class='page-content'>
 		<!-- Contenido Principal-->
-      {% block contenidoTitulo %}{% endblock %}
+      {% block contenidoTitulo %} {% endblock %}
 
-      {%block contenidoPrincipal%}
-      
-      
-      {%endblock%}
+      {%block contenidoPrincipal%} {%endblock%}
 
 	</div>
+
+  <!-- CONTENIDO DE PRODUCTOS -->
+  <div class="contenedorCards">
+      {%block contenidoProductos%} {%endblock%}
+      <!--<img src="{% block imagen2 %} {% endblock %}"> -->
+  </div>
 
   <script src="{% static 'contenido/js/bootstrap.bundle.min.js' %}"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
