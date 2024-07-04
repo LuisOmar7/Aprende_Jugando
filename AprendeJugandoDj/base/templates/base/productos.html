@@ -1,20 +1,22 @@
 {% extends "base/base.html" %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Puzzles</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
 
-<body>
-    <div class="header">
-        <h1>PRODUCTOS</h1>
-        <h2>PUZZLES</h2>
+{%block titulo%} Categorias-Productos {%endblock%}
+
+{%block contenidoTitulo%}
+
+    <div class='bloque-de-color'>
+        <div class='contLandind'>
+            <h3>Productos</h3>
+        </div>  
     </div>
 
-{%block contenidoPrincipal%}
+{%endblock%}
+
+
+
+
+{%block contenidoProductos%}
+
     <div class="contenedorCards">
 
         <div class="card">
@@ -60,7 +62,7 @@
         </div>
 
     </div>
+
 {%endblock%}
-</body>
-</html>
+
 

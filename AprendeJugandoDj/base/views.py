@@ -9,3 +9,6 @@ def categorias(request):
 
 def productos(request):
     return render(request, 'base/productos.html')
+
+def nosotros(request):
+    return render(request, 'base/nosotros.html')
