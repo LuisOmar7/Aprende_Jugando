@@ -115,3 +115,76 @@ body {
     object-fit: cover;
     margin: 25px;
 }
+
+/* Inicio Grid categorias */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: 28vw;
+    margin-top: 3%;
+}
+
+.item {
+    border-radius: 10px;
+    position: relative;
+}
+
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #bb42f5;
+}
+
+.medium {
+    grid-column: span 3;
+    background-color: #ff2d86;
+}
+
+.small {
+    grid-column: span 1;
+    background-color: #4386f9;
+}
+
+.violet {
+    background-color: #5b5ef7;
+}
+
+.light-purple {
+    background-color: #aa61f7;
+}
+
+.title-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 25px;
+    color: aliceblue;
+}
+
+.img-cat-large {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    margin: 25px;
+}
+
+.img-cat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    margin: 25px;
+}

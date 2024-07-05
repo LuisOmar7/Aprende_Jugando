@@ -15,16 +15,38 @@
 
 {%block contenidoPrincipal%}
 
-<div class='container-fluid py-3'>
-    <!--Encabezado -->
-    <div class='row align-items-start'>
-        <div class='col text-start'>
-            <p class='color-text'>Mas buscado</p>
-            <img src="{% static 'images/home.png'%}" alt='Imagen'>
+    <div class="container">
+        <div class="item large purple">
+            <div class='title-cat'>
+                <h2>Puzzles</h2>
+            </div>
+            <img src="{% static 'images/rompecabezas.png'%}" alt="Valores" class="img-cat-large">
+        </div>
+        <div class="item medium pink">
+            <div class='title-cat'>
+                <h3>De mesa</h3>
+            </div>
+            <img src="{% static 'images/contacto.png'%}" alt="Valores" class="img-cat">
+        </div>
+        <div class="item small blue">
+            <div class='title-cat'>
+                <h3>Didacticos</h3>
+            </div>
+            <img src="{% static 'images/contacto.png'%}" alt="Valores" class="img-cat">
+        </div>
+        <div class="item small violet">
+            <div class='title-cat'>
+                <h3>Memoria</h3>
+            </div>
+            <img src="{% static 'images/contacto.png'%}" alt="Valores" class="img-cat">
+        </div>
+        <div class="item small light-purple">
+            <div class='title-cat'>
+                <h3>Colorear</h3>
+            </div>
+            <img src="{% static 'images/contacto.png'%}" alt="Valores" class="img-cat">
         </div>
     </div>
-    <!-- /Encabezado-->
-</div>
 
 {%endblock%}
 
