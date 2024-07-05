@@ -46,8 +46,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 20px;
-    padding-right: 70px;
-    padding-left: 70px;
+    padding-right: 80px;
+    padding-left: 80px;
 }
 
 .card {
@@ -114,4 +114,44 @@ body {
     height: 200px;
     object-fit: cover;
     margin: 25px;
+}
+
+/*CATEGORIA*/
+.textCategorias{
+    text-align: left;
+    list-style: none;
+    line-height: 35px;
+}
+
+
+.category-card {
+    margin: 20px;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.2em;
+}
+.category-card h5 {
+    font-size: 1.5em;
+    background-color: #20c997;
+}
+.bg-info-custom {
+    background-color: #20c997; /* Color personalizado para juegos */
+}
+.bg-purple {
+    background-color: #6f42c1; /* Color personalizado para puzzles */
+}
+
+.bg-primary-custom {
+     /* Color personalizado para creativos */
+}
+
+.imgCategoria{
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.h2Categorias{
+    text-align: left;
+    margin-left: 30px;
 }
