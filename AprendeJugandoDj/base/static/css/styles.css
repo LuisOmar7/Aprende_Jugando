@@ -21,11 +21,13 @@ body {
     align-items: center;
     background-color: #1f587e; /* Color de fondo del bloque */
   }
-  
-.contLandind{
-    color: rgb(255, 255, 255);
-}
 
+.img-bloque {
+    width: 350px; 
+    height: 350px;
+    margin-top: 200px;
+}
+  
 .imgCourses {
     width: 30%;
     height: 30%;
@@ -130,7 +132,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
     height: 28vw;
-    margin-top: 3%;
+    margin-top: 15%;
 }
 
 .item {
@@ -180,12 +182,21 @@ body {
     margin: 25px;
 }
 
+.img-cat-m {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 140px;
+    height: 140px;
+    margin: 25px;
+}
+
 .img-cat {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     margin: 25px;
 }
 
