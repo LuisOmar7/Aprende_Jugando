@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Categorias
+{% endblock %}
+
+{%block contenidoTitulo%}
+
+<div class='bloque-de-color'>
+    <div class='contLandind'>
+        <h3>Categorias</h3>
+    </div>  
+</div>
+
+{%endblock%}
+
+{% block contenidoPrincipal %}
+{% load static %}
+
+
+
+<div class="row text-center">
+    {%for categoria in categorias%}
+    <div class="col-md-15">
+        <a href="{%url 'Productos'%}" class="link-categorias">
+        <div class="category-card bg-info">
+            <h2 class="h2Categorias">{{categoria.nombre}} <img src="{{categoria.imagen.url}}" class="imgCategoria"></h2> 
+            <ul class="textCategorias">
+                 {% for subcategoria in categoria.subcategorias.all %}
+                <li>{{ subcategoria.nombre }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </a>
+    </div>
+{% endblock %}

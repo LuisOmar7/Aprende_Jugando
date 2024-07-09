@@ -4,6 +4,7 @@ from django.db import models
 class Categoria(models.Model):
     nombre = models.TextField()
     descripcion = models.TextField()
+    imagen = models.ImageField(null=True,upload_to="fotoCat",verbose_name="FotoCat")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
 
@@ -18,7 +19,7 @@ class Categoria(models.Model):
 
 class subCategoria(models.Model):
     id = models.AutoField(primary_key=True, verbose_name='Clave')
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, verbose_name='Categoria')
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, verbose_name='Categoria', related_name='subcategorias')
     nombre = models.TextField()
     descripcion = models.TextField()
     created = models.DateTimeField(auto_now_add=True)

@@ -331,6 +331,16 @@ button:hover {
     margin-left: 30px;
 }
 
+.link-categorias{
+text-decoration: none !important;
+color: inherit;
+}
+
+.link-categorias:hover {
+    text-decoration: none !important;
+    color: inherit; /* para que el color del texto no cambie al pasar el mouse */
+}
+
 /* FOOTER */
 .footer {
     background-color: #ED1E79;
