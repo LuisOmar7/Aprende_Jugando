@@ -402,3 +402,62 @@ color: inherit;
     margin: 4px 2px;
     cursor: pointer;
 }
+
+
+/*Estilos registro*/
+.new-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 7vh;
+    margin-left: 15%;
+}
+
+.new-form-container {
+    background-color: #4386f9;
+    padding: 40px; /* Aumenta el padding para hacerlo más grande */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    width: 100%; /* Aumenta el ancho del contenedor */
+    max-width: 10000px; /* Establece un ancho máximo */
+    justify-content: space-between; /* Asegura que el formulario y la imagen del cubo estén separados */
+}
+
+.new-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumenta el espacio entre los elementos del formulario */
+    flex: 1; /* Permite que el formulario ocupe el espacio disponible */
+}
+
+.new-form-container form input {
+    padding: 15px; /* Aumenta el padding para hacer los inputs más grandes */
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+}
+
+.new-form-container form button {
+    padding: 15px; /* Aumenta el padding para hacer el botón más grande */
+    border: none;
+    border-radius: 5px;
+    background-color: #7B61FF;
+    color: #FFFFFF;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    cursor: pointer;
+}
+
+.new-form-container form button:hover {
+    background-color: #5A46CC;
+}
+
+.new-cube-image {
+    margin-left: 200px; /* Aumenta el margen para dar más espacio entre el formulario y la imagen */
+}
+
+.new-cube-image img {
+    max-width: 400px; /* Aumenta el tamaño máximo de la imagen */
+}
