@@ -67,8 +67,9 @@ body {
 }
 
 .img {
-    width: 100%;
-    height: auto;
+    width: 250px;
+    height: 200px;
+    margin-bottom: 20px;
 }
 
 .img2 {
@@ -461,3 +462,90 @@ color: inherit;
 .new-cube-image img {
     max-width: 400px; /* Aumenta el tamaño máximo de la imagen */
 }
+
+/*ESTILOS LOGEADO
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    background-color: #42a5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+}
+
+.profile-details {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d1c4e9;
+    color: #000000;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.logout-button {
+    background-color: #ef5350;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+*/
+
+
+
+/*ESTILOS CUENTA*/
+.login {
+    background-color: #79bef7;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    width: auto;
+    text-align: center;
+}
+
+.button2 {
+    background-color: #009fe3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+

@@ -27,6 +27,10 @@ urlpatterns = [
     path('productos/', views.productos, name='Productos'),
     path('nosotros/', views.nosotros, name='Nosotros'),
     path('registro/',views.registro, name = "Registro")
+    path('categorias/', views.categorias, name='Categorias'),
+    path('productos/', views_productos.productos, name='Productos'),
+    path('nosotros/', views.nosotros, name='Nosotros'),
+    path('cuenta/', views.cuenta, name='Cuenta'),
 ]
 
 if settings.DEBUG:

@@ -15,3 +15,5 @@ def nosotros(request):
 
 def registro(request):
     return render(request, 'base/registro.html')
+def cuenta(request):
+    return render(request, 'base/cuenta.html')
