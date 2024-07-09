@@ -19,16 +19,16 @@
 
     <div class="contenedorCards">
 
-        <!-- {% for curso in curso %} -->
+        {% for productos in productos %} 
 
             <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Cubo 3x3" class="img">
-                <h3>Cubo 3X3</h3>
-                <p class="p">$300</p>
-                <button class="button">Ver Detalles</button>
+                <img src="{{productos.imagen.url}}" class="img">
+                    <h3>{{productos.nombre}}</h3>
+                    <p class="p">${{productos.precio}}</p>
+                    <button class="button">Ver Detalles</button>
             </div>
 
-        <!-- {% endfor %} -->
+         {% endfor %}
 
     </div>
 

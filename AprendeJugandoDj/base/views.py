@@ -12,3 +12,6 @@ def productos(request):
 
 def nosotros(request):
     return render(request, 'base/nosotros.html')
+
+def cuenta(request):
+    return render(request, 'base/cuenta.html')
