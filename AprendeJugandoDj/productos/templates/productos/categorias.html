@@ -18,20 +18,20 @@
 {% load static %}
 
 
-
 <div class="row text-center">
-    {%for categoria in categorias%}
-    <div class="col-md-15">
-        <a href="{%url 'Productos'%}" class="link-categorias">
+    <div class="contenedor-category-cards">
+        {% for categoria in categorias %}
         <div class="category-card bg-info">
-            <h2 class="h2Categorias">{{categoria.nombre}} <img src="{{categoria.imagen.url}}" class="imgCategoria"></h2> 
-            <ul class="textCategorias">
-                 {% for subcategoria in categoria.subcategorias.all %}
-                <li>{{ subcategoria.nombre }}</li>
-                {% endfor %}
-            </ul>
+            <a href="{% url 'Productos' %}" class="link-categorias">
+                <h2 class="h2Categorias">{{ categoria.nombre }} <img src="{{ categoria.imagen.url }}" class="imgCategoria"></h2>
+                <ul class="textCategorias">
+                    {% for subcategoria in categoria.subcategorias.all %}
+                    <li>{{ subcategoria.nombre }}</li>
+                    {% endfor %}
+                </ul>
+            </a>
         </div>
         {% endfor %}
-    </a>
     </div>
+</div>
 {% endblock %}
