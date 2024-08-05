@@ -19,8 +19,9 @@
 
     <div class="contenedorCards">
 
-        {% for productos in productos %} 
+        {% for productos in productos %} <!--Ciclo que extrae los productos registrados-->
 
+            <!--Elementos que se muestran en el card-->
             <div class="card">
                 <img src="{{productos.imagen.url}}" class="img">
                     <h3>{{productos.nombre}}</h3>
@@ -28,7 +29,7 @@
                     <button class="button">Ver Detalles</button>
             </div>
 
-         {% endfor %}
+        {% endfor %}
 
     </div>
 

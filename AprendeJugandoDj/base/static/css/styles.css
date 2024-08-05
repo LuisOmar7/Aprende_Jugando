@@ -39,18 +39,10 @@ body {
 
 
 /*PRODUCTOS*/
-.header {
-    background-color: #009fe3;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
-
 .contenedorCards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: flex; /*Coloca los elementos en fila*/
+    flex-wrap: wrap; /*Coloca los elementos en diferentes lineas*/
+    justify-content: space-around; /*Distribuye los elementos a lo largo*/
     padding-top: 20px;
     padding-right: 80px;
     padding-left: 80px;
@@ -59,7 +51,7 @@ body {
 .card {
     background-color: white;
     border: 1px solid #bfbfbf;
-    border-radius: 10px;
+    border-radius: 10px; /*Redondea*/
     text-align: center;
     padding: 25px;
     width: 300px;
@@ -79,7 +71,7 @@ body {
 
 .p {
     color: #666;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .button {
@@ -89,6 +81,7 @@ body {
     border-radius: 5px;
     padding: 5px;
 }
+
 
 
 /* ESTILOS NOSOTROS */
@@ -119,9 +112,10 @@ body {
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /*Evita que se distorsione la imagen*/
     margin: 25px;
 }
+
 
 
 /* Inicio Grid categorias */
@@ -204,6 +198,7 @@ body {
     height: 50%;
     margin: 25px;
 }
+
 
 
 /* Mas vendido Inicio*/
@@ -297,6 +292,8 @@ button:hover {
     background-size: cover;
 }
 
+
+
 /*CATEGORIA*/
 .textCategorias{
     text-align: left;
@@ -341,6 +338,8 @@ color: inherit;
     text-decoration: none !important;
     color: inherit; /* para que el color del texto no cambie al pasar el mouse */
 }
+
+
 
 /* FOOTER */
 .footer {
@@ -405,6 +404,7 @@ color: inherit;
 }
 
 
+
 /*Estilos registro*/
 .new-form-wrapper {
     display: flex;
@@ -463,89 +463,118 @@ color: inherit;
     max-width: 400px; /* Aumenta el tamaño máximo de la imagen */
 }
 
-/*ESTILOS LOGEADO
-.container {
-    background-color: #ffffff;
-    padding: 20px;
+
+
+/*ESTILOS CUENTA*/
+.loginContenedor {
+    display: flex;
+    justify-content: center; /*Distribuye de manera centrada los elementos*/
+}
+
+.login {
+    background-color: #4386f9;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /*Coloca los elementos uno debajo del otro*/
+    width: 500px;
+    margin-top: 20px;
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button2 {
+    background-color: #9c81e1;
+    color: #ffffff;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: 300px;
+    border: 1px solid black;
+    font-weight: 500;  
+}
+
+.imgCuenta {
+    width: 250px;
+    height: 230px;
+}
+
+.textoRegistro{
+    color: white;
+    text-align: center; 
+    font-weight: 700;  
+}
+
+.textoCuenta{
+    color: white; 
+    text-align: center;   
+}
+
+.inputLogin{
+    margin: 5px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
     text-align: center;
 }
 
-.profile-card {
+
+
+/*ESTILOS LOGEADO*/
+.contenedorLogeado {
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.cardPerfil {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.profile-picture {
+.contenedorPerfil {
     background-color: #42a5f5;
     padding: 20px;
     border-radius: 10px;
     margin-right: 20px;
+    color: white;
+    font-weight: 700;
 }
 
-.profile-picture img {
-    width: 100px;
-    height: 100px;
+.imgPerfil {
+    width: 200px;
+    height: 200px;
 }
 
-.profile-details {
+.datosLogeado {
+    margin-bottom: 10px;    
+    font-weight: bold;
     text-align: left;
 }
 
-.input-group {
-    margin-bottom: 10px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
+.inputLogeado { 
+    padding: 42px;
     border: none;
     border-radius: 5px;
-    background-color: #d1c4e9;
-    color: #000000;
-    font-size: 1em;
-    margin-top: 5px;
+    background-color: #c1a0ff;
+    color: #ffffff;
+    font-size: 15px;    
+    font-weight: 500;
 }
 
-.logout-button {
-    background-color: #ef5350;
+.buttonLogeado {
+    background-color: #ff0000;
     color: white;
-    border: none;
-    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.logout-button:hover {
-    background-color: #d32f2f;
-}
-*/
-
-
-
-/*ESTILOS CUENTA*/
-.login {
-    background-color: #79bef7;
-    padding: 40px;
-    margin: 20px;
-    border-radius: 10px;
-    width: auto;
     text-align: center;
-}
-
-.button2 {
-    background-color: #009fe3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
+    margin-left: 655px;
 }
 

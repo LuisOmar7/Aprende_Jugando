@@ -8,7 +8,7 @@
 
     <div class='bloque-de-color'>
         <div class='contLandind'>
-            <h3>Inicia sesion</h3>
+            <h3>Inicia sesión</h3>
         </div>  
     </div>
 
@@ -16,16 +16,25 @@
 
 
 {%block contenidoPrincipal%}
-
+        
+    <div class="loginContenedor ">
         <div class="login">
-            <img src="{% static 'images/rubik.png'%}" alt="Logo" class="img">
-            <form>
-                <input type="email" placeholder="Correo" required>
-                <input type="password" placeholder="Contraseña" required>
-                <button type="submit" class="button2">Iniciar Sesión</button>
-                <p><br>¿Aún no tienes cuenta? Registrate</p>
+
+            <!--Formulario de inicio de sesion-->
+            <form action="{% url 'Logeado' %}" method="get" class="formLogin">   
+
+                <img src="{% static 'images/rubik.png' %}" alt="Logo" class="imgCuenta">
+                <input type="email" placeholder="Correo" class="inputLogin">
+                <input type="password" placeholder="Contraseña" class="inputLogin">
+                <!--Redirecciona al modulo de usuario logeado-->
+                <button type="submit" class="button2" onclick="{% url 'Registro' %}">Iniciar Sesión</button>
+                <!--Redirecciona al formulario de registro-->
+                <p  class="textoCuenta"><br>¿Aún no tienes cuenta? <a href="{% url 'Registro' %}" class="textoRegistro">Regístrate</a></p>
+
             </form>
+
         </div>
-    
+    </div>
 
 {%endblock%}
+

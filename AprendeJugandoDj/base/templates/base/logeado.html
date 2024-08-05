@@ -1,33 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+{% extends "base/base.html" %}
 
-<body>
-    
-    <div class="container">
-        <div class="profile-card">
-            <div class="profile-picture">
-                <img src="user-icon.png" alt="Icono de Usuario">
-            </div>
-            <div class="profile-details">
-                <p>Nombre: Usuario</p>
-                <div class="input-group">
-                    <label for="email">Correo:</label>
-                    <input type="email" id="email" value="usuario@gmail.com" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" value="************" readonly>
-                </div>
-            </div>
-        </div>
-        <button class="logout-button">Cerrar Sesión</button>
+{% load static %}
+
+{%block titulo%} Perfil {%endblock%}
+
+{%block contenidoTitulo%}
+
+    <div class='bloque-de-color'>
+        <div class='contLandind'>
+            <h3>Mi Cuenta</h3>
+        </div>  
     </div>
 
-</body>
-</html>
+{%endblock%}
+
+
+{%block contenidoPrincipal%}
+    
+    <div class="contenedorLogeado">
+        <div class="cardPerfil">
+            
+            <!--Vista del usuario al iniciar sesion o registrarse-->
+            <div class="contenedorPerfil">
+                <img src="{% static 'images/nosotros2.jpg'%}" class="imgPerfil">
+                <p><br>Nombre: Usuario</p>
+            </div>
+
+            <div class="datosLogeado">
+                <p>Correo:</p>
+                    <input type="email" value="usuario@gmail.com" class="inputLogeado">
+                <p>Contraseña:</p>
+                    <input type="password" value="************" class="inputLogeado">
+            </div>
+            
+        </div>
+    </div>
+    
+    <button class="buttonLogeado">Cerrar Sesión</button>
+
+{%endblock%}
+
