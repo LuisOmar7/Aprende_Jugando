@@ -23,10 +23,11 @@
 
             <!--Elementos que se muestran en el card-->
             <div class="card">
+                <form action="{% url 'Reviews' %}" method="get">
                 <img src="{{productos.imagen.url}}" class="img">
                     <h3>{{productos.nombre}}</h3>
                     <p class="p">${{productos.precio}}</p>
-                    <button class="button">Ver Detalles</button>
+                    <button type="submit" class="button">Ver Detalles</button>
             </div>
 
         {% endfor %}
