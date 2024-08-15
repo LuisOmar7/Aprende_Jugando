@@ -9,3 +9,7 @@ def categorias(request):
 def productos(request):
     productos = Producto.objects.all()
     return render(request, "productos/productos.html", {'productos':productos})
+
+def productoRev(request):
+    productos = Producto.objects.all()
+    return render(request, 'productos/productoRev.html', {'productos':productos})

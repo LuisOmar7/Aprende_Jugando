@@ -1,0 +1,104 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+{%block titulo%} Producto {%endblock%}
+
+{%block contenidoPrincipal%}
+
+    <div class='breadcrumb-line'>
+        <ul class='breadcrumb'>
+            <a href='{%url 'Inicio'%}'>
+                {%if request.path == '/' %}
+                Inicio
+                {%else%}
+                Inicio{{request.path}}
+                {% endif  %}
+            </a>
+        </ul>
+    </div>
+
+    <div class="product-container">
+        {% for productos in productos %}
+
+        <img src="{{productos.imagen.url}}" alt="Cubo 3x3" class="product-image">
+        <div class="block-g">
+        <div class="product-info">
+            <div class="product-name">Producto: {{productos.nombre}}</div>
+            <div class="price">Precio ${{productos.precio}}</div>
+            <div class="stock">40 disponibles</div>
+            <div class="buy-section">
+                <input type="number" value="1" class='cont'>
+                <button>Comprar</button>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+
+    <div class='esp'>
+        <h4>Especificaciones</h4>
+    </div>
+
+    <div class="desc-p">
+        <div class="desc-t">
+            <p>Explora el desafiante mundo del cubo de Rubik con este auténtico rompecabezas de 3x3. Este cubo Rubiks Rubix original oficial es perfecto tanto para niños como para adultos, a partir de 8 años. Su diseño multicolor agrega un toque divertido a su experiencia de resolución de acertijos, y su material plástico garantiza durabilidad y longevidad.</p>
+        </div>
+    </div>
+
+    <div class='esp'>
+        <h4>Opiniones del producto</h4>
+
+
+    <div class="reviews-container">
+        <div class="review">
+            <div class="review-header">
+                <span>usuario * 21/06/2024</span>
+            </div>
+            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
+        </div>
+        <div class="review">
+            <div class="review-header">
+                <span>usuario * 21/06/2024</span>
+            </div>
+            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
+        </div>
+        <div class="review">
+            <div class="review-header">
+                <span>usuario * 21/06/2024</span>
+            </div>
+            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
+        </div>
+
+        <div class="review">
+            <div class="review-header">
+                <span>usuario * 21/06/2024</span>
+            </div>
+            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
+        </div>
+        
+        <div class="review">
+            <div class="review-header">
+                <span>usuario * 21/06/2024</span>
+            </div>
+            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
+        </div>
+        <div class="review-form">
+            <h3>Califica este producto:</h3>
+            <div class="stars">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+            </div>
+            <textarea rows="5" placeholder="Escribe una opinión"></textarea>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
