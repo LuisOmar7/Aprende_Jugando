@@ -13,27 +13,26 @@
 {%endblock%}
 
 
-
-
-{%block contenidoProductos%}
+{% block contenidoProductos %}
 
     <div class="contenedorCards">
 
-        {% for productos in productos %} <!--Ciclo que extrae los productos registrados-->
+        {% for producto in productos %} <!-- Ciclo que extrae los productos registrados -->
 
-            <!--Elementos que se muestran en el card-->
+            <!-- Elementos que se muestran en el card -->
             <div class="card">
-                <form action="{% url 'Reviews' %}" method="get">
-                <img src="{{productos.imagen.url}}" class="img">
-                    <h3>{{productos.nombre}}</h3>
-                    <p class="p">${{productos.precio}}</p>
-                    <button type="submit" class="button">Ver Detalles</button>
+                <img src="{{ producto.imagen.url }}" class="img">
+                <h3>{{ producto.nombre }}</h3>
+                <p class="p">${{ producto.precio }}</p>
+                <!-- Otros detalles del producto (si los tienes) -->
+                <a href="{% url 'Reviews' pk=producto.pk %}">Ver detalles</a>
             </div>
 
         {% endfor %}
 
     </div>
 
-{%endblock%}
+{% endblock %}
+
 
 

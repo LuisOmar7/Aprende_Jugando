@@ -10,16 +10,15 @@
         <ul class='breadcrumb'>
             <a href='{%url 'Inicio'%}'>
                 {%if request.path == '/' %}
-                Inicio
+                Inicio/Categorias
                 {%else%}
-                Inicio{{request.path}}
+                Inicio/Categorias{{request.path}}
                 {% endif  %}
             </a>
         </ul>
     </div>
 
     <div class="product-container">
-        {% for productos in productos %}
 
         <img src="{{productos.imagen.url}}" alt="Cubo 3x3" class="product-image">
         <div class="block-g">
@@ -33,7 +32,7 @@
             </div>
         </div>
         </div>
-        {% endfor %}
+
     </div>
     
 
@@ -43,7 +42,7 @@
 
     <div class="desc-p">
         <div class="desc-t">
-            <p>Explora el desafiante mundo del cubo de Rubik con este auténtico rompecabezas de 3x3. Este cubo Rubiks Rubix original oficial es perfecto tanto para niños como para adultos, a partir de 8 años. Su diseño multicolor agrega un toque divertido a su experiencia de resolución de acertijos, y su material plástico garantiza durabilidad y longevidad.</p>
+            <p>{{ productos.descripcion }}</p>
         </div>
     </div>
 
