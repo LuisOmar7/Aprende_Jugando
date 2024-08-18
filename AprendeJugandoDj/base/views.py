@@ -13,5 +13,11 @@ def productos(request):
 def nosotros(request):
     return render(request, 'base/nosotros.html')
 
+def cuenta(request):
+    return render(request, 'base/cuenta.html')
+
 def registro(request):
     return render(request, 'base/registro.html')
+
+def logeado(request):
+    return render(request, 'base/logeado.html')

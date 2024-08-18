@@ -1,0 +1,42 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+{%block titulo%} Perfil {%endblock%}
+
+{%block contenidoTitulo%}
+
+    <div class='bloque-de-color'>
+        <div class='contLandind'>
+            <h3>Mi Cuenta</h3>
+        </div>  
+    </div>
+
+{%endblock%}
+
+
+{%block contenidoPrincipal%}
+    
+    <div class="contenedorLogeado">
+        <div class="cardPerfil">
+            
+            <!--Vista del usuario al iniciar sesion o registrarse-->
+            <div class="contenedorPerfil">
+                <img src="{% static 'images/nosotros2.jpg'%}" class="imgPerfil">
+                <p><br>Nombre: Usuario</p>
+            </div>
+
+            <div class="datosLogeado">
+                <p>Correo:</p>
+                    <input type="email" value="usuario@gmail.com" class="inputLogeado">
+                <p>Contraseña:</p>
+                    <input type="password" value="************" class="inputLogeado">
+            </div>
+            
+        </div>
+    </div>
+    
+    <button class="buttonLogeado">Cerrar Sesión</button>
+
+{%endblock%}
+

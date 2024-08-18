@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+{%block titulo%} Cuenta {%endblock%}
+
+{%block contenidoTitulo%}
+
+    <div class='bloque-de-color'>
+        <div class='contLandind'>
+            <h3>Inicia sesión</h3>
+        </div>  
+    </div>
+
+{%endblock%}
+
+
+{%block contenidoPrincipal%}
+        
+    <div class="loginContenedor ">
+        <div class="login">
+
+            <!--Formulario de inicio de sesion-->
+            <form action="{% url 'Logeado' %}" method="get" class="formLogin">   
+
+                <img src="{% static 'images/rubik.png' %}" alt="Logo" class="imgCuenta">
+                <input type="email" placeholder="Correo" class="inputLogin">
+                <input type="password" placeholder="Contraseña" class="inputLogin">
+                <!--Redirecciona al modulo de usuario logeado-->
+                <button type="submit" class="button2" onclick="{% url 'Registro' %}">Iniciar Sesión</button>
+                <!--Redirecciona al formulario de registro-->
+                <p  class="textoCuenta"><br>¿Aún no tienes cuenta? <a href="{% url 'Registro' %}" class="textoRegistro">Regístrate</a></p>
+
+            </form>
+
+        </div>
+    </div>
+
+{%endblock%}
+
