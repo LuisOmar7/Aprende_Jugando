@@ -25,7 +25,7 @@
                 <h3>{{ producto.nombre }}</h3>
                 <p class="p">${{ producto.precio }}</p>
                 <!-- Otros detalles del producto (si los tienes) -->
-                <a href="{% url 'Reviews' pk=producto.pk %}">Ver detalles</a>
+                <a href="{% url 'productoRev' pk=producto.pk %}">Ver detalles</a>
             </div>
 
         {% endfor %}
