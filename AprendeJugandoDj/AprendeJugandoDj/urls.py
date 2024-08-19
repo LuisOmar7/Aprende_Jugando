@@ -19,6 +19,8 @@ from django.urls import path
 from base import views
 from productos import views as views_productos
 from django.conf import settings
+from base.views import vistaLogin
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,7 +29,7 @@ urlpatterns = [
     path('productos/<int:pk>/', views_productos.productos, name='Productos'),
     path('producto/<int:pk>/', views_productos.productoRev, name='productoRev'),
     path('nosotros/', views.nosotros, name='Nosotros'),
-    path('cuenta/', views.cuenta, name='Cuenta'),
+    path('cuenta/', vistaLogin.as_view(), name='Cuenta'),
     path('registro/', views.registro, name = "Registro"),
     path('logeado/', views.logeado, name = "Logeado"),
 ]

@@ -2,39 +2,36 @@
 
 {% load static %}
 
-{%block titulo%} Cuenta {%endblock%}
+{% block titulo %} Cuenta {% endblock %}
 
-{%block contenidoTitulo%}
-
+{% block contenidoTitulo %}
     <div class='bloque-de-color'>
         <div class='contLandind'>
             <h3>Inicia sesión</h3>
         </div>  
     </div>
+{% endblock %}
 
-{%endblock%}
-
-
-{%block contenidoPrincipal%}
-        
-    <div class="loginContenedor ">
+{% block contenidoPrincipal %}
+    <div class="loginContenedor">
         <div class="login">
-
-            <!--Formulario de inicio de sesion-->
-            <form action="{% url 'Logeado' %}" method="get" class="formLogin">   
-
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <h4 class="{{ message.tags }}">{{ message }}</h4>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <form action="{% url 'Cuenta' %}" method="post" class="formLogin">   
+                {% csrf_token %}
                 <img src="{% static 'images/rubik.png' %}" alt="Logo" class="imgCuenta">
-                <input type="email" placeholder="Correo" class="inputLogin">
-                <input type="password" placeholder="Contraseña" class="inputLogin">
-                <!--Redirecciona al modulo de usuario logeado-->
-                <button type="submit" class="button2" onclick="{% url 'Registro' %}">Iniciar Sesión</button>
-                <!--Redirecciona al formulario de registro
-                <p  class="textoCuenta"><br>¿Aún no tienes cuenta? <a href="{% url 'Registro' %}" class="textoRegistro">Regístrate</a></p>
-                -->
+                <input type="text" name="username" placeholder="Nombre de usuario" class="inputLogin" pattern="[a-zA-Z]{1,8}" title="El nombre de usuario debe contener solo letras y tener entre 1 y 8 caracteres." required>
+                <input type="password" name="password" placeholder="Contraseña" class="inputLogin" required>
+                <button type="submit" class="button2">Iniciar Sesión</button>
             </form>
-
-        </div>
+            <!--
+            <p class="textoCuenta"><br>¿Aún no tienes cuenta? <a href="{% url 'Registro' %}" class="textoRegistro">Regístrate</a></p>
+            -->
+            </div>
     </div>
-
-{%endblock%}
-
+{% endblock %}

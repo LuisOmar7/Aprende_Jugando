@@ -522,6 +522,11 @@ color: inherit;
     text-align: center;
 }
 
+.messages {
+    color: white;
+    text-align: center;
+}
+
 
 
 /*ESTILOS LOGEADO*/
@@ -733,4 +738,14 @@ button {
     border: none;
     margin-top: 10px;
     resize: none;
+}
+
+.buttonR {
+    background-color: #ED1E79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 505px;
 }
