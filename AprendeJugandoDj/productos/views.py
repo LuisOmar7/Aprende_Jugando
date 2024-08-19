@@ -8,9 +8,10 @@ def categorias(request):
     categorias = Categoria.objects.all()
     return render(request, "productos/categorias.html",{'categorias':categorias})
 
-def productos(request):
-    productos = Producto.objects.all()
-    return render(request, "productos/productos.html", {'productos':productos})
+def productos(request, pk):
+    categoria = get_object_or_404(Categoria, pk=pk) # Busca la categoría con la primary key (pk)
+    productos = Producto.objects.filter(categoria=categoria) # Filtra los productos por esta categoría
+    return render(request, "productos/productos.html", {'categoria': categoria, 'productos': productos})
 
 def productoRev(request, pk):
     producto = get_object_or_404(Producto, pk=pk)

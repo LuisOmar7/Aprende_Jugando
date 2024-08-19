@@ -22,14 +22,9 @@
 <div class="row text-center">
     {%for categoria in categorias%}
     <div class="col-md-15">
-        <a href="{%url 'Productos'%}" class="link-categorias">
+        <a href="{%url 'Productos' pk=categoria.pk %}" class="link-categorias">
         <div class="category-card bg-info">
             <h2 class="h2Categorias">{{categoria.nombre}} <img src="{{categoria.imagen.url}}" class="imgCategoria"></h2> 
-            <ul class="textCategorias">
-                 {% for subcategoria in categoria.subcategorias.all %}
-                <li>{{ subcategoria.nombre }}</li>
-                {% endfor %}
-            </ul>
         </div>
         {% endfor %}
     </a>
