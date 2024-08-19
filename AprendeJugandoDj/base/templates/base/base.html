@@ -82,9 +82,10 @@
           <div class='inf'>
             <h3>Consulta</h3>
           </div>
-          <form action="#">
-              <input class='input-cont' type="email" placeholder="correo@">
-              <textarea class='input-cont-m' type="text" placeholder="mensaje"></textarea>
+          <form method="POST" action="{% url 'comentarioForm' %}">
+            {% csrf_token %}
+              <input class='input-cont' type="email" name="email" placeholder="correo@">
+              <textarea class='input-cont-m' name="mensaje" type="text" placeholder="mensaje"></textarea>
               <input class='button-cont' type="submit" value="Enviar">
           </form>
       </div>

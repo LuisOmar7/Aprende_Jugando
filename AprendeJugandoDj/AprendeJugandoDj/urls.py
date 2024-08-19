@@ -30,6 +30,7 @@ urlpatterns = [
     path('producto/<int:pk>/', views_productos.productoRev, name='productoRev'),
     path('nosotros/', views.nosotros, name='Nosotros'),
     path('cuenta/', vistaLogin.as_view(), name='Cuenta'),
+    path('comentarioForm/', views.comentarioForm, name='comentarioForm'),
     path('registro/', views.registro, name = "Registro"),
     path('logeado/', views.logeado, name = "Logeado"),
 ]

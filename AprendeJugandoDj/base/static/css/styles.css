@@ -100,12 +100,13 @@ body {
     flex: 1;
     padding: 20px;
     background-color: #69b1ff;
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: justify;
     margin: 25px;
+    border-radius: 10px;
 }
 
 .img3 {

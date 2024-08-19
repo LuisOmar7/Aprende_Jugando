@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Comentario
 
-# Register your models here.
+# Registra el modelo Consulta en el admin
+admin.site.register(Comentario)
