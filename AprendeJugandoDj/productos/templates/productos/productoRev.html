@@ -50,52 +50,33 @@
         <h4>Opiniones del producto</h4>
 
 
-    <div class="reviews-container">
-        <div class="review">
-            <div class="review-header">
-                <span>usuario * 21/06/2024</span>
+        <div class="reviews-container">
+            {% for opinion in opiniones %}
+                <div class="review">
+                    <div class="review-header">
+                        <span> Usuario * {{ opinion.created|date:"d/m/Y" }}</span>
+                    </div>
+                    <p>{{ opinion.comentario }}</p>
+                </div>
+            {% endfor %}
+        
+            <div class="review-form">
+                <form method="post" action="{% url 'productoRev' pk=productos.pk %}">
+                    {% csrf_token %}
+                    <h3>Califica este producto:</h3>
+                    <div class="stars">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                    <textarea name="comentario" rows="5" placeholder="Escribe una opinión"></textarea>
+                    <button type="submit">Enviar opinión</button>
+                </form>
             </div>
-            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
-        </div>
-        <div class="review">
-            <div class="review-header">
-                <span>usuario * 21/06/2024</span>
-            </div>
-            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
-        </div>
-        <div class="review">
-            <div class="review-header">
-                <span>usuario * 21/06/2024</span>
-            </div>
-            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
-        </div>
-
-        <div class="review">
-            <div class="review-header">
-                <span>usuario * 21/06/2024</span>
-            </div>
-            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
         </div>
         
-        <div class="review">
-            <div class="review-header">
-                <span>usuario * 21/06/2024</span>
-            </div>
-            <p>El artículo era como se describe; Tanto la caja como el adorno estaban en un estado maravilloso.</p>
-        </div>
-        <div class="review-form">
-            <h3>Califica este producto:</h3>
-            <div class="stars">
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-            </div>
-            <textarea rows="5" placeholder="Escribe una opinión"></textarea>
-        </div>
-    </div>
-</div>
 
 {% endblock %}
 
