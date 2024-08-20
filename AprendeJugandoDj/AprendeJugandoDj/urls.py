@@ -33,6 +33,7 @@ urlpatterns = [
     path('comentarioForm/', views.comentarioForm, name='comentarioForm'),
     path('registro/', views.registro, name = "Registro"),
     path('logeado/', views.logeado, name = "Logeado"),
+    path('producto/<int:pk>/', views_productos.consultaSQL, name='Consultasql'),
 ]
 
 if settings.DEBUG:
