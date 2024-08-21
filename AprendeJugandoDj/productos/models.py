@@ -31,7 +31,7 @@ class Producto(models.Model):
         verbose_name_plural = 'Productos'
         ordering = ['-created']
 
-    def _str_(self):
+    def __str__(self):
         return self.nombre
 
 class Opinion(models.Model):

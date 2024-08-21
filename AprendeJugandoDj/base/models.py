@@ -10,6 +10,6 @@ class Comentario(models.Model):
         verbose_name_plural = "Comentarios Contactos"
         ordering = ["-created"]
 
-    def _str_(self):
+    def __str__(self):
         return self.mensaje
     #Indica que se mostrára el mensaje como valor en la tabla

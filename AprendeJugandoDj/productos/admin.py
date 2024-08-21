@@ -3,6 +3,7 @@ from .models import (Categoria)
 from .models import (Producto)
 from .models import Opinion
 
+
 # Register your models here.
 
 class AdministrarModelo(admin.ModelAdmin):
