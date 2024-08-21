@@ -28,3 +28,10 @@ def productoRev(request, pk):
         form = OpinionForm()
 
     return render(request, 'productos/productoRev.html', {'productos': producto, 'opiniones': opiniones, 'form': form})
+
+
+def consultaSQL(request):
+    productos=Producto.objects.raw('SELECT id, categoria_id, nombre, descripcion, precio, imagen FROM productos_producto WHERE id=id')
+    return render(request, 'productos/productoRev.html', {'productos':productos})
+
+    

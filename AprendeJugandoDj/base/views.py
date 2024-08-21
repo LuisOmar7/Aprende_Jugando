@@ -32,7 +32,7 @@ class vistaLogin(LoginView):
     success_url = reverse_lazy('admin:index')  #Redirección
 
     def form_invalid(self, form):
-        messages.error(self.request, '*Nombre de usuario o contraseña incorrectos intente otra vez')
+        messages.error(self.request, '*Nombre de usuario o contraseña incorrectos, intente otra vez')
         return super().form_invalid(form)
 
     def get_success_url(self):
